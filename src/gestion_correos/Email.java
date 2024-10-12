@@ -2,39 +2,53 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package lab1_programacion2;
+package gestion_correos;
 
-/**
- *
- * @author angel
- */
+
 public class Email {
-            private String remitente;
+    
+    private String receptor;
     private String asunto;
     private String contenido;
-    private boolean leido;
-    public Email(String remitente, String asunto, String contenido){
-        this.remitente=remitente;
+    private boolean seleyo;
+   
+    
+    public Email (String receptor, String asunto, String contenido){
+        this.receptor=receptor;
         this.asunto=asunto;
         this.contenido=contenido;
-        this.leido=false;
+        this.seleyo=false;
+        
+        
     }
-    public String getRemitente(){
-        return remitente;
+    
+    //Getters
+    public String getReceptor(){
+        return receptor;
     }
+    
     public String getAsunto(){
         return asunto;
     }
+    
     public String getContenido(){
         return contenido;
     }
+    
+    
     public boolean getLeido(){
-        return leido;
+        return seleyo;
     }
-    public void setLeido(){
-        leido=true;
+    
+    public void leido(){
+        this.seleyo=true;
     }
+    
     public String print(){
-        return "DE: "+remitente+" ASUNTO: "+asunto+" "+contenido;
+        return "DESTINATARIO: "+receptor+"\n"+"ASUNTO: "+asunto;
     }
+      
+     
+    
+    
 }
